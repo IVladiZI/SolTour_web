@@ -1,5 +1,5 @@
-import { Component, Input } from "@angular/core";
-
+import { Component, Input, EventEmitter, Output } from "@angular/core";
+import { PlaceService } from "../services/place.service";
 @Component({
   selector: 'app-place',
   templateUrl: './place.component.html',
@@ -8,6 +8,14 @@ import { Component, Input } from "@angular/core";
 
 export class PlaceComponent {
   @Input() placeName: string = '';
+  @Output() placeClicked = new EventEmitter();
+  constructor(private placeService: PlaceService) {
+
+  }
+  onClicked() {
+    //this.placeClicked.emit();
+    this.placeService.deletePlace(this.placeName);
+  }
 
 
 }

@@ -1,2 +1,7 @@
-<app-place *ngFor="let place of places" [placeName]="place"></app-place>
+<h1>Lugares Favoritos</h1>
+<form (ngSubmit)="savePlace(f)" #f="ngForm">
+  <input type="text" name="namePlace" ngModel required>
+  <button type="submit">Agregar Lugar</button>
+</form>
 
+<app-place (placeClicked)="deletePlace(place)" *ngFor="let place of places" [placeName]="place"></app-place>
