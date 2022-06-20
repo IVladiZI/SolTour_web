@@ -7,19 +7,22 @@ import { UserComponent } from './user/user.component'
 import { TouristPlaceComponent } from './tourist_place/touristPlace.component'
 import { PlaceComponent } from './place/place.component'
 import { PlaceService } from './services/place.service';
-
+import { HomeComponent } from './home/home.component';
+import { AppRoutingModule } from './app-routing.module'
 
 
 @NgModule({
   declarations: [
     AppComponent,
+    HomeComponent,
     UserComponent,
     TouristPlaceComponent,
-    PlaceComponent
+    PlaceComponent,
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    AppRoutingModule
   ],
   providers: [PlaceService],
   bootstrap: [AppComponent]

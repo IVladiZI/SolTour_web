@@ -15,7 +15,7 @@ export class TouristPlaceComponent implements OnInit, OnDestroy {
 
 
   deletePlace(place: string) {
-    
+
   }
   savePlace(f: NgForm) {
     if (f.valid) {
