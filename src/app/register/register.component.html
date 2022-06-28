@@ -1,0 +1,47 @@
+<section id="form_register">
+  <div class="personal_data">
+    <form fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="10px" action="" class="form_register" #f="ngForm"
+      (ngSubmit)="registerUser(f)">
+      <mat-form-field appearance="fill">
+        <mat-label> Nombre </mat-label>
+        <input matInput ngModel name="name" required>
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label> Apellido Paterno </mat-label>
+        <input matInput ngModel name="first_last_name" required>
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label> Apellido Materno </mat-label>
+        <input matInput ngModel name="second_last_name" required>
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label> Nacionalidad </mat-label>
+        <input matInput ngModel name="nationality" required>
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>Fecha de Nacimiento</mat-label>
+        <input matInput [matDatepicker]="dp" ngModel name="date" required>
+        <mat-datepicker-toggle matSuffix [for]="dp"></mat-datepicker-toggle>
+        <mat-datepicker #dp></mat-datepicker>
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>Correo Electrónico</mat-label>
+        <input type="email" matInput placeholder="Ex..@email.com" ngModel name="email" #emailInput="ngModel" required>
+        <mat-error *ngIf="emailInput.hasError('required') ">El correo electrónico no puede ser vacio</mat-error>
+        <mat-error *ngIf="!emailInput.hasError('required') ">El correo electrónico debe ser valido</mat-error>
+      </mat-form-field>
+      <mat-form-field appearance="fill" hintLabel="La contraseña debe tener mínimo 6 caracteres y una letra mayúscula">
+        <mat-label>Contraseña</mat-label>
+        <input matInput [type]="hide ? 'password' : 'text'" ngModel name="password" minlength="6" autocomplete="on"
+          required>
+        <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Ocultar'"
+          [attr.aria-pressed]="hide">
+          <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+        </button>
+        <mat-error *ngIf="emailInput.hasError('required')">La contraseña debe ser valida</mat-error>
+      </mat-form-field>
+      <button type="submit" mat-raised-button color="primary" [disabled]="f.invalid
+      " id="button_submit">Confirmar</button>
+    </form>
+  </div>
+</section>
