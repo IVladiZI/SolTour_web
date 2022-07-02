@@ -6,12 +6,14 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatInputModule } from '@angular/material/input';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
-import {MAT_MOMENT_DATE_FORMATS, MomentDateAdapter, MAT_MOMENT_DATE_ADAPTER_OPTIONS, MatMomentDateModule} from '@angular/material-moment-adapter';
+import { MAT_MOMENT_DATE_FORMATS, MomentDateAdapter, MAT_MOMENT_DATE_ADAPTER_OPTIONS, MatMomentDateModule } from '@angular/material-moment-adapter';
+import {MatToolbarModule} from '@angular/material/toolbar';
 import { MatDividerModule } from '@angular/material/divider';
-
+import { MatSidenavModule } from '@angular/material/sidenav';
+import {MatListModule} from '@angular/material/list';
 @NgModule({
-  imports: [MatButtonModule, MatIconModule, MatFormFieldModule, MatDatepickerModule, MatMomentDateModule, MatInputModule, BrowserAnimationsModule,MatDividerModule],
-  exports: [MatButtonModule, MatIconModule, MatFormFieldModule, MatDatepickerModule, MatMomentDateModule, MatInputModule, BrowserAnimationsModule,MatDividerModule]
+  imports: [MatButtonModule, MatIconModule, MatFormFieldModule, MatDatepickerModule, MatMomentDateModule, MatInputModule, BrowserAnimationsModule, MatDividerModule, MatSidenavModule,MatToolbarModule,MatListModule],
+  exports: [MatButtonModule, MatIconModule, MatFormFieldModule, MatDatepickerModule, MatMomentDateModule, MatInputModule, BrowserAnimationsModule, MatDividerModule, MatSidenavModule,MatToolbarModule,MatListModule]
 })
 
 

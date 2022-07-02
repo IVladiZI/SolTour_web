@@ -40,8 +40,12 @@
         </button>
         <mat-error *ngIf="emailInput.hasError('required')">La contraseña debe ser valida</mat-error>
       </mat-form-field>
-      <button type="submit" mat-raised-button color="primary" [disabled]="f.invalid
+
+        <mat-divider></mat-divider>
+
+        <button type="submit" mat-raised-button color="primary" [disabled]="f.invalid
       " id="button_submit">Confirmar</button>
     </form>
   </div>
 </section>
+

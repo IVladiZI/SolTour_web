@@ -4,8 +4,8 @@ import { Subscription } from "rxjs";
 import { PlaceService } from "../services/place.service";
 
 @Component({
-  selector: 'app-touristPlace',
-  templateUrl: './touristPlace.component.html'
+  selector: 'app-tourist-place',
+  templateUrl: './tourist-place.component.html'
 })
 
 export class TouristPlaceComponent implements OnInit, OnDestroy {
