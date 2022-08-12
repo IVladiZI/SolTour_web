@@ -3,4 +3,11 @@
     <mat-icon>home</mat-icon>
     <span class="navigation-list-label" >Inicio</span>
   </a>
+  <mat-list-item>
+    <button mat-icon-button (click)="LogOut()" *ngIf="statusUser" >
+      <mat-icon>eject</mat-icon>
+      <span class="navigation-list-label">Salir</span>
+    </button>
+  </mat-list-item>
 </mat-nav-list>
+

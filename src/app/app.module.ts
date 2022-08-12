@@ -15,6 +15,8 @@ import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
 import { ToolBarComponent } from './navigation/tool-bar/tool-bar.component';
 import { MenuListComponent } from './navigation/menu-list/menu-list.component';
+import { SecurityService } from './security/service/security.service';
+import { PlacesComponent } from './places/places.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +29,7 @@ import { MenuListComponent } from './navigation/menu-list/menu-list.component';
     LoginComponent,
     ToolBarComponent,
     MenuListComponent,
+    PlacesComponent,
   ],
   imports: [
     BrowserModule,
@@ -35,7 +38,7 @@ import { MenuListComponent } from './navigation/menu-list/menu-list.component';
     MaterialModule,
     FlexLayoutModule
   ],
-  providers: [PlaceService],
+  providers: [PlaceService,SecurityService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

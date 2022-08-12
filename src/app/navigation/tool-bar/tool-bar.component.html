@@ -6,10 +6,10 @@
     Bienvenido a Sol Tour Bolivia
   </span>
   <div fxFlex fxLayout fxLayoutAlign="flex-end" fxHide.xs>
-    <ul fxLayout="row" fxLayoutGap="15px" class="navigation-menu" >
-      <li><a routerLink="/register">Registrar</a></li>
-      <li><a routerLink="/login">Iniciar Sesión</a></li>
-      <li><a routerLink="/">Inicio</a></li>
+    <ul fxLayout="row" fxLayoutGap="15px" class="navigation-menu">
+      <li *ngIf="stateUser"><a routerLink="/">Inicio</a></li>
+      <li *ngIf="!stateUser"><a routerLink="/login">Iniciar Sesión</a></li>
+      <li *ngIf="!stateUser"><a routerLink="/register">Registrar</a></li>
     </ul>
   </div>
 </mat-toolbar>

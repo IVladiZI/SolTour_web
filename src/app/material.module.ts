@@ -11,9 +11,10 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import {MatListModule} from '@angular/material/list';
+import {MatCardModule} from '@angular/material/card';
 @NgModule({
-  imports: [MatButtonModule, MatIconModule, MatFormFieldModule, MatDatepickerModule, MatMomentDateModule, MatInputModule, BrowserAnimationsModule, MatDividerModule, MatSidenavModule,MatToolbarModule,MatListModule],
-  exports: [MatButtonModule, MatIconModule, MatFormFieldModule, MatDatepickerModule, MatMomentDateModule, MatInputModule, BrowserAnimationsModule, MatDividerModule, MatSidenavModule,MatToolbarModule,MatListModule]
+  imports: [MatButtonModule, MatIconModule, MatFormFieldModule, MatDatepickerModule, MatMomentDateModule, MatInputModule, BrowserAnimationsModule, MatDividerModule, MatSidenavModule,MatToolbarModule,MatListModule,MatCardModule],
+  exports: [MatButtonModule, MatIconModule, MatFormFieldModule, MatDatepickerModule, MatMomentDateModule, MatInputModule, BrowserAnimationsModule, MatDividerModule, MatSidenavModule,MatToolbarModule,MatListModule,MatCardModule]
 })
 
 

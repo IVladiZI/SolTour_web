@@ -5,8 +5,8 @@ import {
   MAT_MOMENT_DATE_ADAPTER_OPTIONS,
 } from '@angular/material-moment-adapter';
 import { DateAdapter, MAT_DATE_FORMATS, MAT_DATE_LOCALE } from '@angular/material/core';
-import 'moment/locale/fr';
 import { NgForm } from '@angular/forms';
+import { SecurityService } from '../security/service/security.service';
 
 @Component({
   selector: 'app-register',
@@ -24,11 +24,27 @@ import { NgForm } from '@angular/forms';
 })
 export class RegisterComponent implements OnInit {
   hide = true;
-  constructor() { }
+  constructor(private securityService:SecurityService) { }
 
   ngOnInit(): void {
   }
   registerUser(form:NgForm){
+    this.securityService.registerUser({
+      userId : '',
+      userName : form.value.userNme,
+      email : form.value.email,
+      password : form.value.password,
+      person : {
+        name:form.value.name,
+        firstLastName:form.value.firstLastName,
+        secondLastName:form.value.secondLastName,
+        nationality:form.value.nationality,
+        date:form.value.date
+      },
+      date : form.value.Date,
+      state : form.value.state
+    })
+
   }
 
 
